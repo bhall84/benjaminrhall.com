@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Hall — Web3 Education Consultant</title>
-    <meta name="description" content="Transform your Web3 knowledge base into engaging microlearning that drives product adoption and slashes support costs. 10+ years of instructional design expertise.">
+    <title>Ben Hall — AI Training for Older Adults | Stay Independent, Connected & Creative</title>
+    <meta name="description" content="Personalized AI training designed for older adults. Use AI to stay independent, connected, and creative. 15 years of adult learning design expertise. Patient, hands-on, jargon-free.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,15 +15,17 @@
     <nav class="nav" id="nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <span class="logo-text">BH</span>
-                <span class="logo-divider"></span>
+                <span class="logo-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </span>
                 <span class="logo-name">Ben Hall</span>
             </a>
             <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
+                <a href="#course">Self-Paced Course</a>
+                <a href="#packages">1-on-1 Training</a>
+                <a href="#organizations">Organizations</a>
                 <a href="#about">About</a>
-                <a href="#contact" class="nav-cta">Get in Touch</a>
+                <a href="#contact" class="nav-cta">Get Started</a>
             </div>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -35,173 +37,154 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
+        <a href="#course">Self-Paced Course</a>
+        <a href="#packages">1-on-1 Training</a>
+        <a href="#organizations">Organizations</a>
         <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
     </div>
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-            <div class="grid-overlay"></div>
-        </div>
+        <div class="hero-bg"></div>
         <div class="container hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Web3 Education Strategy
-            </div>
-            <h1>Your users don't read docs.<br><span class="gradient-text">Let's fix that.</span></h1>
-            <p class="hero-sub">I turn complex Web3 knowledge bases into engaging microlearning that drives product adoption and cuts support tickets — so your team can focus on building.</p>
+            <p class="hero-eyebrow">AI Training Designed for Adults</p>
+            <h1>Use AI to stay independent, connected, and&nbsp;creative.</h1>
+            <p class="hero-sub">AI is the most powerful tool of our time &mdash; and you don't need a tech background to use it well. I'll guide you through it with patience, practice, and a plan built around <em>your</em> goals.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary">
-                    Start a Conversation
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Schedule Your Free Consultation
                 </a>
-                <a href="#services" class="btn btn-secondary">See How It Works</a>
+                <a href="#packages" class="btn btn-outline">View Training Packages</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Years in Learning Design</span>
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    <span>EdS &amp; MEd, University of Georgia</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">Web3</span>
-                    <span class="stat-label">Industry Focus</span>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+                    <span>15+ Years in Adult Learning Design</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Remote &amp; Async</span>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span>Patient, Hands-On, Jargon-Free</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="problem" id="problem">
+    <!-- The Gentle On-Ramp -->
+    <section class="promise">
         <div class="container">
-            <div class="section-label">The Problem</div>
-            <h2>Web3 has an <span class="gradient-text">education problem</span></h2>
-            <p class="section-desc">Your product is powerful. But if users can't understand it, they'll leave — and your support team pays the price.</p>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="promise-card">
+                <h2>A gentle on-ramp to the world of AI</h2>
+                <p>My training is designed around how adults actually learn best: at a comfortable pace, with lots of repetition and practice, and always connected to real things you care about. Every session comes with printed guides and checklists you can reference anytime. And we'll always discuss privacy, safety, and ethical use &mdash; so you feel confident, not just capable.</p>
+                <div class="promise-features">
+                    <div class="promise-feature">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                        <span>Slower pacing with plenty of repetition</span>
                     </div>
-                    <h3>Documentation Overload</h3>
-                    <p>Walls of text that nobody reads. Users bounce before they ever understand your product's value.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.364 5.636a9 9 0 11-12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div class="promise-feature">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                        <span>Printed guides and step-by-step checklists</span>
                     </div>
-                    <h3>User Drop-Off</h3>
-                    <p>Complex onboarding flows cause new users to abandon your product before they experience the "aha" moment.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div class="promise-feature">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                        <span>Clear guidance on privacy, safety &amp; ethics</span>
                     </div>
-                    <h3>Support Burnout</h3>
-                    <p>Your team answers the same basic questions over and over — questions that proper education would eliminate.</p>
+                    <div class="promise-feature">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                        <span>Built on proven adult learning principles</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- Self-Paced Online Course -->
+    <section class="course" id="course">
         <div class="container">
-            <div class="section-label">Services</div>
-            <h2>Education that <span class="gradient-text">drives adoption</span></h2>
-            <p class="section-desc">I design learning experiences built for how adults actually learn — not how most companies think they learn.</p>
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-tag">Most Popular</div>
-                    <div class="service-icon-wrap">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5">
-                            <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
-                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Microlearning Modules</h3>
-                    <p>Transform dense knowledge bases into bite-sized, interactive learning paths. Quizzes included to verify comprehension and boost retention.</p>
-                    <ul class="service-features">
-                        <li>Knowledge base audit &amp; content mapping</li>
-                        <li>Modular lesson design (3-5 min each)</li>
-                        <li>Built-in quizzes &amp; knowledge checks</li>
-                        <li>Optional token-gated rewards</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon-wrap">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad2)" stroke-width="1.5">
-                            <defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
-                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>User Onboarding Programs</h3>
-                    <p>Structured onboarding sequences that take new users from "what is this?" to confident power users.</p>
-                    <ul class="service-features">
-                        <li>"Crypto Wallet 101" style courses</li>
-                        <li>Security best practices for non-technical users</li>
-                        <li>Progressive skill-building paths</li>
-                        <li>Completion tracking &amp; analytics</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon-wrap">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad3)" stroke-width="1.5">
-                            <defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
-                            <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Education Strategy Consulting</h3>
-                    <p>Not sure where to start? I'll audit your current content and build a roadmap to educational excellence.</p>
-                    <ul class="service-features">
-                        <li>Content &amp; UX education audit</li>
-                        <li>Learning strategy roadmap</li>
-                        <li>Token incentive design (learn-to-earn)</li>
-                        <li>Team training &amp; handoff</li>
-                    </ul>
-                </div>
+            <div class="section-header">
+                <p class="section-label">Learn on Your Own Time</p>
+                <h2>A self-paced online course designed for the way you learn</h2>
+                <p class="section-desc">Prefer to learn independently, on your own schedule? This modular course walks you through AI from the very beginning &mdash; with clear lessons, built-in practice, and knowledge checks along the way.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Token Incentive Callout -->
-    <section class="callout">
-        <div class="container">
-            <div class="callout-card">
-                <div class="callout-content">
-                    <div class="section-label">Learn-to-Earn</div>
-                    <h2>Reward users for <span class="gradient-text">learning your product</span></h2>
-                    <p>Think Coinbase Earn, but for your product. Users complete microlearning modules and quizzes, then earn tokens or rewards for demonstrating mastery. It's education that pays — literally.</p>
-                    <div class="callout-features">
-                        <div class="callout-feature">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#6366f1"/></svg>
-                            <span>Higher completion rates</span>
-                        </div>
-                        <div class="callout-feature">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#6366f1"/></svg>
-                            <span>Deeper product engagement</span>
-                        </div>
-                        <div class="callout-feature">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#6366f1"/></svg>
-                            <span>Measurable knowledge gain</span>
+            <div class="course-card">
+                <div class="course-content">
+                    <div class="course-badge">Coming Soon</div>
+                    <h3>AI Essentials for Everyday Life</h3>
+                    <p class="course-subtitle">A beginner-friendly, go-at-your-own-pace course for adults who want to learn AI without the pressure of live sessions.</p>
+
+                    <div class="course-modules">
+                        <h4>What you'll learn</h4>
+                        <div class="module-grid">
+                            <div class="module-item">
+                                <span class="module-number">1</span>
+                                <div>
+                                    <strong>What Is AI, Really?</strong>
+                                    <p>A plain-language introduction to AI &mdash; what it is, what it isn't, and why it matters for your daily life.</p>
+                                </div>
+                            </div>
+                            <div class="module-item">
+                                <span class="module-number">2</span>
+                                <div>
+                                    <strong>Your First Conversations with AI</strong>
+                                    <p>Learn how to talk to AI tools like ChatGPT. Practice writing prompts that get you clear, useful answers.</p>
+                                </div>
+                            </div>
+                            <div class="module-item">
+                                <span class="module-number">3</span>
+                                <div>
+                                    <strong>AI for Everyday Tasks</strong>
+                                    <p>Put AI to work on real things: writing emails, planning trips, organizing information, brainstorming ideas, and more.</p>
+                                </div>
+                            </div>
+                            <div class="module-item">
+                                <span class="module-number">4</span>
+                                <div>
+                                    <strong>Staying Safe &amp; Smart with AI</strong>
+                                    <p>Understand privacy, accuracy, and ethical use. Learn what to trust, what to double-check, and how to protect yourself.</p>
+                                </div>
+                            </div>
+                            <div class="module-item">
+                                <span class="module-number">5</span>
+                                <div>
+                                    <strong>Building Your AI Toolkit</strong>
+                                    <p>Create your own collection of go-to prompts, explore custom GPTs, and set up a simple workflow you can use every day.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="callout-visual">
-                    <div class="token-animation">
-                        <div class="token-ring"></div>
-                        <div class="token-core">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                    <div class="course-features">
+                        <div class="course-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                            <span>Go at your own pace &mdash; no deadlines, no pressure</span>
+                        </div>
+                        <div class="course-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                            <span>Knowledge checks after every module to reinforce learning</span>
+                        </div>
+                        <div class="course-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                            <span>Downloadable checklists and prompt guides to keep</span>
+                        </div>
+                        <div class="course-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                            <span>Designed by a certified instructional designer for adult learners</span>
+                        </div>
+                    </div>
+
+                    <div class="course-pricing">
+                        <div class="course-price-box">
+                            <span class="price-amount">$129</span>
+                            <span class="price-detail">Lifetime access</span>
+                        </div>
+                        <div class="course-cta-group">
+                            <a href="mailto:ben@benjaminrhall.com?subject=AI%20Essentials%20Course%20-%20Waitlist" class="btn btn-primary">Join the Waitlist</a>
+                            <p class="course-cta-note">Be the first to know when the course launches. No commitment required.</p>
                         </div>
                     </div>
                 </div>
@@ -209,88 +192,283 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process" id="process">
+    <!-- 1-on-1 Training Packages -->
+    <section class="packages" id="packages">
         <div class="container">
-            <div class="section-label">Process</div>
-            <h2>Simple. Structured. <span class="gradient-text">Effective.</span></h2>
-            <p class="section-desc">A proven process refined over 10+ years of designing learning experiences for complex products.</p>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Audit &amp; Discover</h3>
-                        <p>I dig into your existing documentation, support tickets, and user feedback to identify the biggest knowledge gaps and pain points.</p>
+            <div class="section-header">
+                <p class="section-label">1-on-1 Training</p>
+                <h2>Prefer personalized guidance? Choose a training package.</h2>
+                <p class="section-desc">For those who want a real person by their side &mdash; whether you're curious about AI, want to use it in daily life, or are ready to integrate it into a new career chapter.</p>
+            </div>
+            <div class="packages-grid">
+
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <p class="package-audience">For the curious or cautious</p>
+                        <h3>AI Starter Assessment &amp;&nbsp;Roadmap</h3>
+                        <p class="package-tagline">Get a clear, personalized plan for learning AI &mdash; at your own pace, with zero pressure.</p>
                     </div>
-                </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Design &amp; Architect</h3>
-                        <p>Using adult learning principles, I design a modular curriculum that meets your users where they are — from crypto-curious to power user.</p>
+                    <div class="package-price">
+                        <span class="price-amount">$350</span>
+                        <span class="price-detail">Flat package</span>
                     </div>
-                </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Build &amp; Deliver</h3>
-                        <p>I produce the learning modules, quizzes, and supporting materials — ready to plug into your platform or deploy standalone.</p>
+                    <div class="package-includes">
+                        <h4>What's included</h4>
+                        <ul class="package-features">
+                            <li>Pre-session survey about your goals, devices, and comfort level</li>
+                            <li>One 60&ndash;90 minute live session (Zoom or in person) covering AI basics and 2&ndash;3 use-cases tailored to you</li>
+                            <li>A written 2&ndash;3 page <strong>"AI Roadmap"</strong> &mdash; your step-by-step plan for what to learn and which tools to start with</li>
+                        </ul>
                     </div>
+                    <a href="#contact" class="btn btn-outline btn-block">Book Your Assessment</a>
                 </div>
-                <div class="process-connector"></div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Measure &amp; Iterate</h3>
-                        <p>We track completion rates, quiz scores, and support ticket volume to quantify impact and refine the experience over time.</p>
+
+                <!-- Package 2 -->
+                <div class="package-card featured">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <p class="package-audience">For everyday confidence</p>
+                        <h3>AI Skills for Everyday&nbsp;Life</h3>
+                        <p class="package-tagline">Hands-on coaching to use AI for the things that matter to you &mdash; planning trips, writing emails, managing documents, exploring hobbies, and more.</p>
                     </div>
+                    <div class="package-price">
+                        <span class="price-amount">$750</span>
+                        <span class="price-detail">4 sessions over 4&ndash;6 weeks</span>
+                    </div>
+                    <div class="package-includes">
+                        <h4>What's included</h4>
+                        <ul class="package-features">
+                            <li>Four 60-minute live sessions with screen-sharing practice</li>
+                            <li>Custom <strong>"prompt cheat-sheets"</strong> designed for your specific goals (e.g., caregiving info, creative writing, budgeting, travel)</li>
+                            <li>Email support between sessions for questions and encouragement</li>
+                            <li>Printed reference guides and checklists after every session</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-block">Start Learning</a>
                 </div>
+
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <p class="package-audience">For your next chapter</p>
+                        <h3>AI for Encore Careers &amp; Side&nbsp;Income</h3>
+                        <p class="package-tagline">Use AI to update your skills, launch freelance work, create a course, or build a side income &mdash; on your terms.</p>
+                    </div>
+                    <div class="package-price">
+                        <span class="price-amount">$1,200</span>
+                        <span class="price-detail">4 sessions + implementation plan</span>
+                    </div>
+                    <div class="package-includes">
+                        <h4>What's included</h4>
+                        <ul class="package-features">
+                            <li>90-minute kickoff session to clarify your offer and AI opportunities</li>
+                            <li>Three 60-minute working sessions focused on building real assets &mdash; course outlines, workshop plans, marketing content, or workflow automations</li>
+                            <li>A personalized <strong>90-day implementation plan</strong> so you know exactly what to do next</li>
+                            <li>Email support throughout the engagement</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-block">Plan Your Next Chapter</a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- For Organizations -->
+    <section class="organizations" id="organizations">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">For Organizations</p>
+                <h2>Bring AI literacy to the people you serve</h2>
+                <p class="section-desc">Libraries, senior centers, continuing education programs, and community colleges: I design complete, ready-to-teach AI curricula built specifically for older adult learners.</p>
+            </div>
+
+            <div class="org-card">
+                <div class="org-content">
+                    <h3>"AI Literacy for Older Adults" &mdash; Curriculum in a&nbsp;Box</h3>
+                    <p>A complete, turnkey curriculum designed for your staff to facilitate &mdash; or for me to deliver directly. Every element is built using adult learning principles and designed for older adults who are new to AI.</p>
+
+                    <div class="org-deliverables">
+                        <h4>What's included</h4>
+                        <ul class="package-features">
+                            <li>Needs assessment call (60&ndash;90 minutes) with your staff</li>
+                            <li>A complete, modular curriculum (4&ndash;6 sessions of 90 minutes each)</li>
+                            <li>Facilitator guide with teaching notes and pacing suggestions</li>
+                            <li>Slide decks, printed handouts, and hands-on practice activities</li>
+                            <li>Evaluation tools: feedback forms and pre/post self-assessments</li>
+                            <li>Beginner-friendly, hands-on sessions using tools like ChatGPT</li>
+                        </ul>
+                    </div>
+
+                    <div class="org-tiers">
+                        <div class="org-tier">
+                            <div class="org-tier-header">
+                                <h4>Template + Light Customization</h4>
+                                <span class="org-price">$3,000 &ndash; $5,000</span>
+                            </div>
+                            <p>Pre-built curriculum adapted to your audience and context. Ideal for organizations that want a proven framework with your branding and specific examples.</p>
+                        </div>
+                        <div class="org-tier">
+                            <div class="org-tier-header">
+                                <h4>Fully Custom for Your Organization</h4>
+                                <span class="org-price">$6,000 &ndash; $10,000</span>
+                            </div>
+                            <p>Built from scratch around your community's needs, technology access, and learning goals. Includes deeper stakeholder collaboration and ongoing support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="org-cta">
+                <p>Interested in bringing AI literacy to your community? Let's talk about what your organization needs.</p>
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-content">
-                    <div class="section-label">About</div>
-                    <h2>The bridge between <span class="gradient-text">complex tech</span> and clear understanding</h2>
-                    <p>I'm Ben Hall — an instructional designer and learning strategist with over a decade of experience in adult education, HR, and learning development.</p>
-                    <p>I've spent my career figuring out how to make complex information click for real people. Now I'm focused on Web3, where the gap between product capability and user comprehension is costing companies millions in lost adoption and support overhead.</p>
-                    <p>My approach is rooted in how adults actually learn: through relevance, practice, and immediate application — not through 40-page PDFs nobody reads.</p>
-                    <div class="about-tags">
-                        <span class="tag">Instructional Design</span>
-                        <span class="tag">Adult Learning Theory</span>
-                        <span class="tag">Curriculum Development</span>
-                        <span class="tag">Web3 / Crypto</span>
-                        <span class="tag">Microlearning</span>
-                        <span class="tag">Learn-to-Earn</span>
-                    </div>
-                </div>
                 <div class="about-photo">
-                    <div class="photo-placeholder" id="headshot-placeholder">
-                        <img src="BenHall_Headshot.jpg" alt="Ben Hall — Web3 Education Consultant" />
+                    <img src="BenHall_Headshot.jpg" alt="Ben Hall — AI Training Specialist" class="headshot" />
+                </div>
+                <div class="about-content">
+                    <p class="section-label">About Your Instructor</p>
+                    <h2>AI is the content. Making it safe and usable for you is my craft.</h2>
+                    <p>I'm Ben Hall. For over 15 years, I've designed learning experiences for adult learners in higher education and beyond. I know how adults learn best &mdash; with patience, relevance, hands-on practice, and the freedom to go at their own pace.</p>
+                    <p>With an <strong>EdS in Learning, Design, and Technology</strong> and an <strong>MEd from the University of Georgia</strong>, plus an <strong>MLIS from Valdosta State University</strong>, I've built my career at the intersection of instructional design, emerging technology, and lifelong learning.</p>
+                    <p>What makes me different isn't that I know AI. It's that I know how to <em>teach</em> it &mdash; especially to people who didn't grow up with technology. My training in adult learning theory and accessibility means every session is designed to feel safe, welcoming, and genuinely useful.</p>
+                    <p>I believe everyone deserves access to the transformative power of AI &mdash; not just the tech-savvy few. That's why I focus on making AI approachable, practical, and connected to the things you actually care about.</p>
+                    <div class="credentials">
+                        <div class="credential">
+                            <strong>EdS</strong>
+                            <span>Learning, Design &amp; Technology &mdash; UGA</span>
+                        </div>
+                        <div class="credential">
+                            <strong>MEd</strong>
+                            <span>University of Georgia</span>
+                        </div>
+                        <div class="credential">
+                            <strong>MLIS</strong>
+                            <span>Valdosta State University</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Approach -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">My Approach</p>
+                <h2>Learning AI should feel like learning from a trusted friend</h2>
+                <p class="section-desc">Every session is designed around how adults actually learn &mdash; with real-world relevance, plenty of practice and repetition, and zero jargon.</p>
+            </div>
+            <div class="approach-grid">
+                <div class="approach-step">
+                    <div class="approach-number">1</div>
+                    <div class="approach-content">
+                        <h3>We start with what matters to you</h3>
+                        <p>Before our first session, I'll learn about your goals, your comfort level, and the things you'd love AI to help with. Planning trips? Writing letters? Organizing photos? Your interests drive everything we do.</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="approach-number">2</div>
+                    <div class="approach-content">
+                        <h3>Learn by doing, at your pace</h3>
+                        <p>Every session is hands-on. You'll use AI tools in real time, with me right there guiding you. We go at your speed, repeat as needed, and celebrate small wins along the way. No rush, no pressure.</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="approach-number">3</div>
+                    <div class="approach-content">
+                        <h3>Build confidence that sticks</h3>
+                        <p>I design each session to build on the last, using proven adult learning principles. You'll develop real confidence gradually, with each new skill reinforcing what you've already practiced.</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="approach-number">4</div>
+                    <div class="approach-content">
+                        <h3>Take it with you</h3>
+                        <p>After each session, you'll receive printed guides, checklists, and prompt cheat-sheets &mdash; simple reference materials you can keep by your computer. No need to memorize anything.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Social Proof Placeholder -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-card">
+                <blockquote>
+                    <p>"The best part about working with Ben is that he never makes you feel behind. He meets you exactly where you are and makes AI feel like something you can actually use."</p>
+                </blockquote>
+                <p class="proof-note">Have a testimonial to share? <a href="#contact">Let me know</a> &mdash; I'd love to feature your experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Common Questions</p>
+                <h2>You might be wondering&hellip;</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Do I need any technical experience?</summary>
+                    <p>Not at all. If you can send an email and browse the internet, you have everything you need to get started. My training is specifically designed for people who aren't "tech people" &mdash; and that's exactly my specialty.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What equipment do I need?</summary>
+                    <p>Just a computer (Mac or PC) with an internet connection. Sessions are conducted over Zoom video call, and we'll use web-based AI tools that don't require any special software. I can also meet in person if you're local.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How are sessions different from a YouTube tutorial?</summary>
+                    <p>Tutorials are one-size-fits-all. My sessions are built entirely around you &mdash; your goals, your pace, your questions. It's like having a patient, knowledgeable friend sitting next to you, guiding you through each step and making sure you truly understand before moving on.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What if I need to go slower or repeat something?</summary>
+                    <p>That's not just okay &mdash; it's expected and welcomed. Repetition is how adults build lasting skills. I design sessions with plenty of practice time, and you'll always have printed guides to refer back to on your own.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What's the difference between the online course and the 1-on-1 packages?</summary>
+                    <p>The self-paced course lets you learn independently, on your own schedule, with built-in knowledge checks and downloadable guides. The 1-on-1 packages give you personalized, live guidance tailored to your specific goals. Some people start with the course and then add 1-on-1 sessions for deeper help &mdash; whatever works best for you.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>I'm not sure which option is right for me.</summary>
+                    <p>That's exactly what the free consultation is for. We'll talk about your goals and I'll recommend the best fit &mdash; whether that's the self-paced course, one of the training packages, or a combination. Many people start with the AI Starter Assessment to get a clear roadmap.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is AI safe? I've heard concerns about privacy.</summary>
+                    <p>Great question, and one I take very seriously. Privacy, safety, and ethical use are woven into every session. I'll show you exactly what AI can and can't do, how to protect your personal information, and how to use these tools responsibly. You'll feel informed, not just capable.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>I represent a library or senior center. Can you train our community?</summary>
+                    <p>Absolutely. I design complete "AI Literacy for Older Adults" curricula for organizations &mdash; with facilitator guides, handouts, slide decks, and evaluation tools. <a href="#organizations">Learn more about organizational packages</a> or <a href="#contact">reach out directly</a>.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-card">
-                <div class="section-label">Let's Talk</div>
-                <h2>Ready to turn your docs into a <span class="gradient-text">learning engine</span>?</h2>
-                <p>Whether you have a clear project in mind or just want to explore how better user education could impact your metrics — I'd love to hear from you.</p>
+                <p class="section-label">Let's Talk</p>
+                <h2>Ready to take the first step?</h2>
+                <p>Send me an email and tell me a little about yourself &mdash; what you're hoping to learn, and any questions you have. I'll write back within 24 hours to schedule a free, no-pressure introductory call.</p>
                 <a href="mailto:ben@benjaminrhall.com" class="btn btn-primary btn-lg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     ben@benjaminrhall.com
                 </a>
-                <p class="contact-note">I typically respond within 24 hours.</p>
+                <p class="contact-note">Free 15-minute introductory call &mdash; no pressure, no obligation.</p>
             </div>
         </div>
     </section>
@@ -299,15 +477,11 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <span class="logo-text">BH</span>
-                <span class="footer-copy">&copy; 2026 Benjamin R. Hall. All rights reserved.</span>
+                <span class="footer-name">Ben Hall</span>
+                <span class="footer-divider">&middot;</span>
+                <span class="footer-tagline">AI Training for Adults</span>
             </div>
-            <div class="footer-links">
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <p class="footer-copy">&copy; 2026 Benjamin R. Hall. All rights reserved.</p>
         </div>
     </footer>
 

@@ -1,5 +1,5 @@
 // ============================================
-// Ben Hall — Web3 Education Consultant
+// Ben Hall — AI Training for Adults
 // Site Interactions
 // ============================================
 
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
         const isOpen = mobileMenu.classList.toggle('active');
         toggle.setAttribute('aria-expanded', isOpen);
-        // Animate hamburger to X
         const spans = toggle.querySelectorAll('span');
         if (isOpen) {
             spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll-triggered fade-in animations ---
     const animateElements = document.querySelectorAll(
-        '.problem-card, .service-card, .process-step, .callout-card, .about-content, .about-photo, .contact-card'
+        '.promise-card, .course-card, .package-card, .org-card, .approach-step, .proof-card, .about-content, .about-photo, .contact-card, .faq-list'
     );
 
     animateElements.forEach(el => el.classList.add('fade-in'));
@@ -78,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Stagger animation for grid items ---
     const staggerGroups = [
-        document.querySelectorAll('.problem-card'),
-        document.querySelectorAll('.service-card'),
+        document.querySelectorAll('.package-card'),
     ];
 
     staggerGroups.forEach(group => {
@@ -88,9 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Process step stagger ---
-    document.querySelectorAll('.process-step').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 150}ms`;
+    // --- Approach step stagger ---
+    document.querySelectorAll('.approach-step').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 120}ms`;
     });
 
 });
