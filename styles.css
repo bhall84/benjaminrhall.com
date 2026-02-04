@@ -602,8 +602,8 @@ h2 {
 .packages-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    align-items: start;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0 24px;
 }
 
 .package-card {
@@ -613,6 +613,9 @@ h2 {
     border-radius: var(--radius-lg);
     padding: 36px 32px;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
 }
 
 .package-card:hover {
@@ -671,7 +674,7 @@ h2 {
 }
 
 .package-includes {
-    margin-bottom: 24px;
+    margin-bottom: 0;
 }
 
 .package-includes h4 {
@@ -1144,7 +1147,14 @@ h2 {
 @media (max-width: 1024px) {
     .packages-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
         max-width: 480px;
+        gap: 24px;
+    }
+
+    .package-card {
+        grid-row: span 1;
+        grid-template-rows: none;
     }
 
     .about-grid {
