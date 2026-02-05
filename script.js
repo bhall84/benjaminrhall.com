@@ -1,5 +1,5 @@
 // ============================================
-// Ben Hall — AI Training for Adults
+// Ben Hall — AI Orientation for Older Adults
 // Site Interactions
 // ============================================
 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll-triggered fade-in animations ---
     const animateElements = document.querySelectorAll(
-        '.promise-card, .course-card, .package-card, .org-card, .approach-step, .proof-card, .about-content, .about-photo, .contact-card, .faq-list'
+        '.promise-card, .testimonial-card, .package-card, .org-card, .why-me-card, .approach-step, .about-content, .about-photo, .contact-card, .faq-list'
     );
 
     animateElements.forEach(el => el.classList.add('fade-in'));
@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Stagger animation for grid items ---
     const staggerGroups = [
         document.querySelectorAll('.package-card'),
+        document.querySelectorAll('.testimonial-card'),
     ];
 
     staggerGroups.forEach(group => {
