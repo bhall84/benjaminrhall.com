@@ -1168,6 +1168,26 @@ h2 {
     font-weight: 400;
 }
 
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.footer-contact-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-contact-link:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+}
+
 .footer-copy {
     font-size: 13px;
     color: var(--text-muted);
