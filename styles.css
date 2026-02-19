@@ -549,6 +549,7 @@ h2 {
     grid-row: span 4;
 }
 
+
 .package-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
@@ -1376,6 +1377,15 @@ h2 {
         padding: 16px 28px;
         font-size: 16px;
     }
+
+    .in-home-standalone-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .in-home-standalone {
+        padding: 28px 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1478,6 +1488,67 @@ h2 {
     color: var(--text-secondary);
     margin-top: 12px;
     padding: 0 4px;
+}
+
+/* --- In-Home Coaching Standalone --- */
+.in-home-standalone {
+    margin-top: 32px;
+    background: var(--gold-subtle);
+    border: 2px solid var(--gold);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+}
+
+.in-home-standalone-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.in-home-heading {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.in-home-intro {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.in-home-title {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.in-home-price-line {
+    font-size: 15px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.in-home-standalone-details h4 {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.in-home-area {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
 /* --- AI Quick-Start Course --- */
