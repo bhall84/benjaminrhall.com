@@ -54,53 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Scroll-triggered fade-in animations ---
-    const animateElements = document.querySelectorAll(
-        '.promise-card, .testimonial-card, .package-card, .org-card, .why-me-card, .approach-step, .about-content, .about-photo, .contact-card, .faq-list'
-    );
-
-    animateElements.forEach(el => el.classList.add('fade-in'));
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.01,
-        rootMargin: '0px 0px 0px 0px'
-    });
-
-    animateElements.forEach(el => observer.observe(el));
-
-    // Safety net: reveal any elements that are already in view on load
-    // (handles fast scrolling, anchor links, and browser restore)
-    setTimeout(() => {
-        animateElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                el.classList.add('visible');
-            }
-        });
-    }, 300);
-
-    // --- Stagger animation for grid items ---
-    const staggerGroups = [
-        document.querySelectorAll('.package-card'),
-        document.querySelectorAll('.testimonial-card'),
-    ];
-
-    staggerGroups.forEach(group => {
-        group.forEach((el, i) => {
-            el.style.transitionDelay = `${i * 100}ms`;
-        });
-    });
-
-    // --- Approach step stagger ---
-    document.querySelectorAll('.approach-step').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 120}ms`;
-    });
+    // Note: Scroll-triggered fade-in animations were removed.
+    // They caused content to appear invisible or semi-transparent
+    // when visitors scrolled at normal speed, which is especially
+    // problematic for the 65+ target audience. Content reliability
+    // is more important than animation polish for this site.
 
 });
