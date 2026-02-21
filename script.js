@@ -69,11 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.01,
+        rootMargin: '0px 0px 0px 0px'
     });
 
     animateElements.forEach(el => observer.observe(el));
+
+    // Safety net: reveal any elements that are already in view on load
+    // (handles fast scrolling, anchor links, and browser restore)
+    setTimeout(() => {
+        animateElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                el.classList.add('visible');
+            }
+        });
+    }, 300);
 
     // --- Stagger animation for grid items ---
     const staggerGroups = [
