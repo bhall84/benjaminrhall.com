@@ -1,0 +1,7 @@
+# robots.txt for benjaminrhall.com
+# Allows all search engine crawlers to index the full site.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://benjaminrhall.com/sitemap.xml
