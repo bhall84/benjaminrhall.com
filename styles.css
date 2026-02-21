@@ -1664,3 +1664,27 @@ h2 {
 .contact-options-3 .contact-option .btn + .btn {
     margin-top: 10px;
 }
+
+.course-screenshots {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.course-screenshots img {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 200px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.course-stat {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 1rem 0 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--gold);
+}
