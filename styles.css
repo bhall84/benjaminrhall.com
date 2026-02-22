@@ -667,6 +667,93 @@ h2 {
     margin-top: 4px;
 }
 
+.price-note {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.price-per-person {
+    display: block;
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Learning path strip */
+.learning-path {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.path-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 160px;
+}
+
+.path-num {
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.path-label {
+    line-height: 1.4;
+}
+
+.path-label a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.path-arrow {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Section footnote (free intro call nudge) */
+.section-footnote {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.section-footnote a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .path-arrow {
+        display: none;
+    }
+}
+
 .package-features {
     list-style: none;
     margin-bottom: 28px;
