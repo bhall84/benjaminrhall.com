@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, {
             threshold: 0.05,    // fire very early (5% visible)
-            rootMargin: '0px 0px -40px 0px'  // slight offset from bottom
+            rootMargin: '0px 0px -80px 0px'  // element must be 80px into viewport
         });
 
         targets.forEach(el => observer.observe(el));
@@ -111,17 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(() => {
             targets.forEach(el => {
                 const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                if (rect.top < window.innerHeight * 0.5 && rect.bottom > 0) {
                     el.classList.add('is-visible');
                 }
             });
         });
-
-        // SAFETY FALLBACK 2: Reveal everything after 3 seconds
-        // in case observer doesn't fire
-        setTimeout(() => {
-            targets.forEach(el => el.classList.add('is-visible'));
-        }, 3000);
     }
 
 });
