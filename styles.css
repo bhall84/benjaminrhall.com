@@ -1,6 +1,6 @@
 /* ============================================
    Ben Hall — AI Training for Adults
-   Warm & Approachable Theme
+   Confident Clarity Theme
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -11,26 +11,26 @@
 }
 
 :root {
-    --bg-primary: #FDFAF6;
-    --bg-warm: #F7F2EB;
-    --bg-cream: #FFF9F0;
+    --bg-primary: #F9F7F4;
+    --bg-warm: #F0ECE6;
+    --bg-cream: #FEFCF9;
     --bg-card: #FFFFFF;
-    --border: #E8DFD3;
-    --border-light: #F0E8DC;
-    --text-primary: #2C2417;
-    --text-secondary: #5C5043;
-    --text-muted: #8A7E72;
-    --accent: #1B4B6B;
-    --accent-light: #2A6F97;
-    --accent-dark: #0F3450;
-    --gold: #C5953A;
-    --gold-light: #D4A94E;
-    --gold-subtle: rgba(197, 149, 58, 0.08);
-    --accent-subtle: rgba(27, 75, 107, 0.06);
-    --shadow-sm: 0 1px 3px rgba(44, 36, 23, 0.06);
-    --shadow-md: 0 4px 16px rgba(44, 36, 23, 0.08);
-    --shadow-lg: 0 8px 32px rgba(44, 36, 23, 0.1);
-    --shadow-card: 0 2px 12px rgba(44, 36, 23, 0.06);
+    --border: #D8D2C8;
+    --border-light: #E8E3DB;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --text-muted: #7C838D;
+    --accent: #2B5EA7;
+    --accent-light: #3B78C8;
+    --accent-dark: #1E4578;
+    --gold: #B87333;
+    --gold-light: #CC8844;
+    --gold-subtle: rgba(184, 115, 51, 0.08);
+    --accent-subtle: rgba(43, 94, 167, 0.07);
+    --shadow-sm: 0 1px 3px rgba(31, 41, 55, 0.06);
+    --shadow-md: 0 4px 16px rgba(31, 41, 55, 0.08);
+    --shadow-lg: 0 8px 32px rgba(31, 41, 55, 0.10);
+    --shadow-card: 0 2px 12px rgba(31, 41, 55, 0.06);
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
@@ -83,7 +83,7 @@ strong {
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(253, 250, 246, 0.9);
+    background: rgba(249, 247, 244, 0.9);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid transparent;
@@ -92,7 +92,7 @@ strong {
 
 .nav.scrolled {
     border-bottom-color: var(--border);
-    background: rgba(253, 250, 246, 0.97);
+    background: rgba(249, 247, 244, 0.97);
     box-shadow: var(--shadow-sm);
 }
 
@@ -185,7 +185,7 @@ strong {
     top: 72px;
     left: 0;
     right: 0;
-    background: rgba(253, 250, 246, 0.98);
+    background: rgba(249, 247, 244, 0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
@@ -230,8 +230,8 @@ strong {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 50% at 20% 80%, rgba(27, 75, 107, 0.04), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(197, 149, 58, 0.05), transparent);
+        radial-gradient(ellipse 80% 50% at 20% 80%, rgba(43, 94, 167, 0.05), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(184, 115, 51, 0.06), transparent);
     pointer-events: none;
 }
 
