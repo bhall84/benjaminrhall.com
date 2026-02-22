@@ -1282,10 +1282,24 @@ h2 {
     pointer-events: none;
 }
 
-/* --- Scroll Animations (disabled) --- */
-/* Fade-in animations were removed because they caused content
-   to appear invisible when scrolling at normal speed.
-   All content is now immediately visible for accessibility. */
+/* --- Scroll Animations --- */
+/* Safe approach: elements are fully visible by default.
+   Animations only apply when (a) user allows motion and
+   (b) JavaScript adds the .scroll-animate class.
+   Effect is subtle — slight fade + lift, not full opacity:0. */
+
+@media (prefers-reduced-motion: no-preference) {
+    .scroll-animate {
+        opacity: 0.82;
+        transform: translateY(18px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .scroll-animate.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
