@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '.promise-card, .course-card, .testimonial-card, ' +
             '.callout-card, .why-me-card, .approach-step, ' +
             '.package-card, .org-cta, .about-grid, ' +
-            '.faq-list, .contact-card, .section-divider, ' +
+            '.faq-list, .contact-card, ' +
             '.in-home-standalone, .proof-card, ' +
             '.stat-item, .section-header, ' +
             '.promise-feature, .why-me-item'
