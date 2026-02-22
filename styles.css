@@ -1283,22 +1283,28 @@ h2 {
 }
 
 /* --- Scroll Animations --- */
-/* Safe approach: elements are fully visible by default.
-   Animations only apply when (a) user allows motion and
-   (b) JavaScript adds the .scroll-animate class.
-   Effect is subtle — slight fade + lift, not full opacity:0. */
+/* Elements are fully visible by default (no JS = no animation).
+   JS adds .scroll-animate only when motion is allowed.
+   Three safety fallbacks: above-fold instant reveal,
+   IntersectionObserver, and 3-second timeout. */
 
 @media (prefers-reduced-motion: no-preference) {
     .scroll-animate {
-        opacity: 0.82;
-        transform: translateY(18px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
 
     .scroll-animate.is-visible {
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* Staggered delays for grid children */
+    .scroll-animate.stagger-1 { transition-delay: 0.1s; }
+    .scroll-animate.stagger-2 { transition-delay: 0.2s; }
+    .scroll-animate.stagger-3 { transition-delay: 0.3s; }
+    .scroll-animate.stagger-4 { transition-delay: 0.4s; }
 }
 
 /* --- Responsive --- */

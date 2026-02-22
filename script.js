@@ -55,27 +55,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Scroll-triggered fade-in animations ---
-    // Safe approach: elements start fully visible in CSS.
-    // We add .scroll-animate (which dims them slightly) only if
-    // the browser supports IntersectionObserver AND the user
-    // hasn't requested reduced motion. A fallback timer ensures
-    // everything is visible within 3 seconds no matter what.
+    // Elements start fully visible in CSS (no JS = no animation).
+    // We add .scroll-animate (opacity:0 + translateY) only when
+    // the browser supports IntersectionObserver AND user allows
+    // motion. Three safety fallbacks prevent content from hiding:
+    // 1) Above-fold content revealed instantly on first frame
+    // 2) IntersectionObserver fires at 5% visibility
+    // 3) Timeout reveals everything after 3 seconds
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-        // Select elements to animate — major content blocks only
+        // Select elements to animate — content blocks + grid items
         const targets = document.querySelectorAll(
             '.promise-card, .course-card, .testimonial-card, ' +
             '.callout-card, .why-me-card, .approach-step, ' +
             '.package-card, .org-cta, .about-grid, ' +
             '.faq-list, .contact-card, .section-divider, ' +
             '.in-home-standalone, .proof-card, ' +
-            '.stat-item, .section-header'
+            '.stat-item, .section-header, ' +
+            '.promise-feature, .why-me-item'
         );
 
-        // Add the animation class (dims slightly + shifts down)
+        // Add the animation class (invisible + shifted down)
         targets.forEach(el => el.classList.add('scroll-animate'));
+
+        // Add stagger classes to grid children for cascade effect
+        document.querySelectorAll(
+            '.testimonials-grid, .cohorts-grid, .workshops-grid, ' +
+            '.testimonials-stats, .why-me-grid, .promise-features'
+        ).forEach(grid => {
+            const children = grid.querySelectorAll('.scroll-animate');
+            children.forEach((child, i) => {
+                child.classList.add('stagger-' + Math.min(i + 1, 4));
+            });
+        });
 
         // Observer reveals elements when they enter the viewport
         const observer = new IntersectionObserver((entries) => {
@@ -92,14 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         targets.forEach(el => observer.observe(el));
 
-        // Fallback: reveal everything after 3 seconds in case
-        // observer doesn't fire (e.g., all content already in view)
-        setTimeout(() => {
-            targets.forEach(el => el.classList.add('is-visible'));
-        }, 3000);
-
-        // Also immediately reveal anything already in the viewport
-        // (above the fold content shouldn't animate in)
+        // SAFETY FALLBACK 1: Immediately reveal anything already
+        // in the viewport (above-the-fold content shouldn't animate)
         requestAnimationFrame(() => {
             targets.forEach(el => {
                 const rect = el.getBoundingClientRect();
@@ -108,6 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // SAFETY FALLBACK 2: Reveal everything after 3 seconds
+        // in case observer doesn't fire
+        setTimeout(() => {
+            targets.forEach(el => el.classList.add('is-visible'));
+        }, 3000);
     }
 
 });
