@@ -1,5 +1,5 @@
 // ============================================
-// Ben Hall — AI Orientation for Older Adults
+// Ben Hall — AI Fluency Education
 // Site Interactions
 // ============================================
 
@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Navigation scroll effect ---
     const nav = document.getElementById('nav');
+
+    // On dark-hero pages (org + individuals), nav starts transparent
+    if (document.querySelector('.hero-dark')) {
+        nav.classList.add('is-overlay');
+    }
+
     const onScroll = () => {
         nav.classList.toggle('scrolled', window.scrollY > 20);
     };
@@ -36,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
+            toggle.setAttribute('aria-expanded', false);
             const spans = toggle.querySelectorAll('span');
             spans[0].style.transform = '';
             spans[1].style.opacity = '';
@@ -55,10 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Scroll-triggered fade-in animations ---
-    // Elements start fully visible in CSS (no JS = no animation).
-    // We add .scroll-animate (opacity:0 + translateY) only when
-    // the browser supports IntersectionObserver AND user allows
-    // motion. Three safety fallbacks prevent content from hiding:
+    // Elements are fully visible by default (no JS = no animation).
+    // JS adds .scroll-animate only when motion is allowed.
+    // Three safety fallbacks prevent content from hiding:
     // 1) Above-fold content revealed instantly on first frame
     // 2) IntersectionObserver fires at 5% visibility
     // 3) Timeout reveals everything after 3 seconds
@@ -66,32 +72,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-        // Select elements to animate — content blocks + grid items
         const targets = document.querySelectorAll(
-            '.promise-card, .course-card, .testimonial-card, ' +
-            '.callout-card, .why-me-card, .approach-step, ' +
-            '.package-card, .org-cta, .about-grid, ' +
-            '.faq-list, .contact-card, ' +
-            '.in-home-standalone, .proof-card, ' +
-            '.stat-item, .section-header, ' +
-            '.promise-feature, .why-me-item'
+            '.pillar-card, .path-card, .testimonial-card, ' +
+            '.testimonial-slot, .about-grid, .stat-item, ' +
+            '.section-header, .audience-card, .coaching-card, ' +
+            '.course-card, .credential-strip, .newsletter-form'
         );
 
-        // Add the animation class (invisible + shifted down)
         targets.forEach(el => el.classList.add('scroll-animate'));
 
-        // Add stagger classes to grid children for cascade effect
+        // Add stagger classes to grid children
         document.querySelectorAll(
-            '.testimonials-grid, .cohorts-grid, .workshops-grid, ' +
-            '.testimonials-stats, .why-me-grid, .promise-features'
+            '.pillars-grid, .paths-grid, .stats-row, ' +
+            '.testimonials-grid, .audiences-grid, .coaching-grid'
         ).forEach(grid => {
             const children = grid.querySelectorAll('.scroll-animate');
             children.forEach((child, i) => {
-                child.classList.add('stagger-' + Math.min(i + 1, 4));
+                child.classList.add('stagger-' + Math.min(i + 1, 5));
             });
         });
 
-        // Observer reveals elements when they enter the viewport
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -100,14 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.05,    // fire very early (5% visible)
-            rootMargin: '0px 0px -80px 0px'  // element must be 80px into viewport
+            threshold: 0.05,
+            rootMargin: '0px 0px -60px 0px'
         });
 
         targets.forEach(el => observer.observe(el));
 
-        // SAFETY FALLBACK 1: Immediately reveal anything already
-        // in the viewport (above-the-fold content shouldn't animate)
+        // SAFETY FALLBACK 1: Reveal above-fold content instantly
         requestAnimationFrame(() => {
             targets.forEach(el => {
                 const rect = el.getBoundingClientRect();
@@ -116,6 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // SAFETY FALLBACK 2: Reveal everything after 3 seconds
+        setTimeout(() => {
+            targets.forEach(el => el.classList.add('is-visible'));
+        }, 3000);
     }
 
 });
