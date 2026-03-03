@@ -822,6 +822,117 @@ h2 {
     margin-top: 14px;
 }
 
+/* --- MailerLite Embed Brand Overrides --- */
+#mlb2-37813730.ml-form-embedContainer {
+    display: block !important;
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100% !important;
+}
+#mlb2-37813730 .ml-form-embedWrapper {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+#mlb2-37813730 .ml-form-embedWrapper.embedForm {
+    max-width: 100% !important;
+}
+#mlb2-37813730 .ml-form-embedBody {
+    padding: 0 !important;
+}
+/* Hide MailerLite's internal heading/description — page has its own */
+#mlb2-37813730 .ml-form-embedContent {
+    display: none !important;
+}
+/* Horizontal flex layout matching existing newsletter-form */
+#mlb2-37813730 form.ml-block-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+}
+#mlb2-37813730 .ml-form-formContent {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 !important;
+}
+#mlb2-37813730 .ml-form-fieldRow {
+    margin: 0 !important;
+}
+/* Input — match site style */
+#mlb2-37813730 .ml-form-fieldRow input[type="email"] {
+    font-family: var(--font) !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    padding: 13px 16px !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+    color: var(--text-primary) !important;
+    background: var(--bg-white) !important;
+    height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+#mlb2-37813730 .ml-form-fieldRow input[type="email"]:focus {
+    border-color: var(--teal) !important;
+    box-shadow: 0 0 0 3px rgba(26, 140, 122, 0.1) !important;
+    outline: none !important;
+}
+#mlb2-37813730 .ml-form-fieldRow input[type="email"]::-webkit-input-placeholder { color: var(--text-muted) !important; }
+#mlb2-37813730 .ml-form-fieldRow input[type="email"]::-moz-placeholder { color: var(--text-muted) !important; }
+#mlb2-37813730 .ml-form-fieldRow input[type="email"]:-ms-input-placeholder { color: var(--text-muted) !important; }
+/* Submit button — teal, matching .btn.btn-primary */
+#mlb2-37813730 .ml-form-embedSubmit {
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
+}
+#mlb2-37813730 .ml-form-embedSubmit button.primary {
+    background-color: var(--teal) !important;
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    cursor: pointer;
+    font-family: var(--font) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    padding: 13px 24px !important;
+    white-space: nowrap;
+    width: auto !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+}
+#mlb2-37813730 .ml-form-embedSubmit button.primary:hover {
+    background-color: var(--teal-dark) !important;
+}
+/* Success message */
+#mlb2-37813730 .ml-form-successBody {
+    padding: 0 !important;
+}
+#mlb2-37813730 .ml-form-successContent h4 {
+    font-family: var(--font) !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    text-align: center !important;
+    margin: 0 0 8px !important;
+}
+#mlb2-37813730 .ml-form-successContent p {
+    font-family: var(--font) !important;
+    font-size: 15px !important;
+    color: var(--text-secondary) !important;
+    text-align: center !important;
+    margin: 0 !important;
+}
+
 /* --- Footer CTA --- */
 .footer-cta {
     padding: 96px 0;
@@ -1484,6 +1595,17 @@ h2 {
     .newsletter-form input[type="email"],
     .newsletter-form .btn {
         width: 100%;
+    }
+
+    #mlb2-37813730 form.ml-block-form {
+        flex-direction: column;
+    }
+    #mlb2-37813730 .ml-form-formContent,
+    #mlb2-37813730 .ml-form-embedSubmit {
+        width: 100% !important;
+    }
+    #mlb2-37813730 .ml-form-embedSubmit button.primary {
+        width: 100% !important;
     }
 
     .path-card,
