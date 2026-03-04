@@ -893,7 +893,7 @@ h2 {
     float: none !important;
     width: auto !important;
 }
-#mlb2-37813730 .ml-form-embedSubmit button.primary {
+#mlb2-37813730.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
     background-color: var(--teal) !important;
     border: none !important;
     border-radius: var(--radius-sm) !important;
@@ -910,7 +910,7 @@ h2 {
     height: auto !important;
     box-sizing: border-box !important;
 }
-#mlb2-37813730 .ml-form-embedSubmit button.primary:hover {
+#mlb2-37813730.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
     background-color: var(--teal-dark) !important;
 }
 /* Success message */
@@ -1604,7 +1604,7 @@ h2 {
     #mlb2-37813730 .ml-form-embedSubmit {
         width: 100% !important;
     }
-    #mlb2-37813730 .ml-form-embedSubmit button.primary {
+    #mlb2-37813730.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
         width: 100% !important;
     }
 
